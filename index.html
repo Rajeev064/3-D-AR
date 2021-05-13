@@ -41,10 +41,15 @@
 <body>
   <model-viewer src="Astronaut.glb"
                 ar
-                auto-rotate camera-controls
+                auto-rotate 
+                camera-controls
                 shadow-intensity="1" 
                 alt="A 3D model of a rocket" background-color="#70BCD1">
                   
   </model-viewer>
+<script>
+const ModelViewerElement = customElements.get('model-viewer');
+ModelViewerElement.dracoDecoderLocation = 'http://example.com/location/of/draco/decoder/files/';
+</script>
 </body>
 </html>
